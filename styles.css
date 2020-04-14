@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap');
+* {
+    margin: 0;
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+body {
+    background: linear-gradient(to top left, #33ccff 0%, #990099 100%);
+}
+.cabecalho {
+    background-image: url("covid8.jpg");
+    background-image: url("genoma4.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 500px;
+    background-position: center;
+    color: #FFF;
+}
+input#checkbox{
+    display: none;
+}
+.menu {
+    padding-top: 2em;
+    width: 80%;
+    margin: 0 auto;
+}
+.menu ul {
+    display: flex;
+    list-style-type: none;
+}
+.menu li {
+    padding: 10px 15px;
+    justify-content: center;
+}
+.menu a {
+    font-size: 25px;
+    font-weight: bold;
+}
+.menu a:hover {
+    background : -webkit-linear-gradient( left, #00ace6 0%, #00ffff 100%);
+    -webkit-background-clip : text;
+    -webkit-text-fill-color : transparent;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.section {
+    width: 45%;
+    margin: 2em 0 0 5em;
+    text-align: start;
+    color: #FFF;
+    border-radius: 10px;
+    padding: 1em;
+}
+.virus {
+    position: absolute;
+    width: 600px;
+    right: 20px;
+    top: 800px;
+}
+img {
+    width: 100%;
+    float: right;
+}
+.section0 p {
+    width: 85%;
+    margin: 4em auto;
+    color: #FFF;
+    font-size: 25px;
+    font-weight: bold;
+}
+.section1 {
+    
+    background: linear-gradient(to left, #724dc0 0%, #8625ac 100%);
+}
+.section2 {
+    background: linear-gradient(to left, #6c5bc6 0%, #8031b2 100%);
+}
+.section3 {
+    background: linear-gradient(to left, #6568cd 0%, #7a3eb8 100%);
+}
+.section4 {
+    background: linear-gradient(to left, #6171d1 0%, #7548bd 100%);
+}
+.section5 {
+    background: linear-gradient(to left, #5b7dd7 0%, #6e55c4 100%);
+}
+.section6 {
+    background: linear-gradient(to left, #538cdf 0%, #6960c9 100%);
+    margin-bottom: 8em;
+}
+/*Sobre Page*/
+.sobreSection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.sobreTitle {
+    color: #ededed;
+    margin-top: 3em;
+    font-size: 40px;
+}
+.sobreSection p {
+    width: 85%;
+    margin: 4em auto;
+    color: #FFF;
+    font-size: 25px;
+    font-weight: bold;
+}
+.sobreSection i, span {
+    font-size: 30px;
+    color: #FFF;
+}
+/*Contat Page*/
+.form {
+    width: 40%;
+    margin: 5em auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius: 10px;
+    color: #fff;
+}
+.form h1 {
+    margin: 1em ;
+    font-size: 35px;
+    text-shadow: 1px 1px 1px #8625ac;
+}
+.form p {
+    width: 90%;
+    margin: 5px auto;
+    font-size: 20px;
+}
+.form i {
+    margin-right: 1em;
+}
+
+/*Saiba Mais Page*/
+.section0 .link {
+    margin: 2em auto;
+    width: 85%;
+}
+footer {
+    background-color: #ededed;
+    padding: 1em 0;
+    display: flex;
+    justify-content: center;
+}
+footer p {
+    margin: 0 1.5em;
+}
+
+@media (max-width: 812px){
+    *{ float: none;}
+    header .checkbox {
+        position: absolute;
+        right: 10px;
+        top: 20px;
+        display: block;
+        width: 30px;
+        padding: 5px 0;
+        border: solid #fff;
+        border-width: 3px 0;
+        cursor: pointer;
+    }
+    header .checkbox::before{
+        content: '';
+        display:block;
+        height: 3px;
+        background: #fff;
+        z-index: 2;
+    }
+    header .checkbox-fechar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+        transition: all 500ms ease;
+        transform: translate(100% , 0);
+    }
+    header .menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border-left: 1px solid #ccc;
+        background: linear-gradient(to top left, #33ccff 0%, #990099 100%);
+        overflow-x: auto;
+        z-index: 2;
+        transition: all 500ms ease ;
+        transform: translate(100%, 0);
+    }
+    #checkbox:checked ~ .checkbox-fechar{
+        transform: translate(0, 0);
+    }
+    #checkbox:checked ~ nav{
+        transform: translate(0, 0);
+    }
+    .menu ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .cabecalho {
+        background-image: url("genoma4.jpg");
+        background-repeat: no-repeat;
+        background-size: 200%;
+        height: 400px;
+        background-position: center;
+    }
+    .virus {
+        display: none;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section {
+        width: 80%;
+        margin: 1em 0;
+    }
+    .sobreTitle {
+        width: 85%;
+        margin: 2em auto 0 auto;
+    }
+    .sectionContact {
+        width: 100%;
+    }
+    .form {
+        width: 100%;
+    }
+    .form p {
+        font-size: 19px;
+    }
+    @media (max-width: 500px) {
+        footer {
+            display: flex;
+            flex-direction: column;
+        }
+        .lineFooter {
+            display: none;
+        }
+    }
+}
